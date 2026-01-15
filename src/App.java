@@ -1,4 +1,5 @@
 import Structures.Sets.Sets;
+import Structures.maps.Maps;
 import controller.MaquinaController;
 import models.Maquina;
 import models.Persona;
@@ -6,7 +7,9 @@ import models.Persona;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class App {
@@ -44,7 +47,16 @@ public class App {
 
         System.out.println("Carlos".compareTo("Luis"));
         
-        runMaquina();
+        // runMaquina();
+        Maps mapas = new Maps();
+        System.out.println(mapas.construirHashMap());
+        mapas.construirLinkedHashMap();
+
+        Map<Persona,Integer> treeMaps = new HashMap<>(mapas.construirTreeMapPerson());
+        System.err.println(treeMaps);
+        System.out.println("");
+        mapas.printFilter(treeMaps);
+        
     }
 
     private static void runMaquina() {

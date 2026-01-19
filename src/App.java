@@ -1,25 +1,20 @@
-import Structures.Sets.Sets;
-import Structures.maps.Maps;
+import Structures.maps.EjerciciosMapas;
 import controller.MaquinaController;
-import models.Maquina;
-import models.Persona;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
+import models.Maquina;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Sets setsClase = new Sets();
+        /*Sets setsClase = new Sets();
         Set<String> hashSet = setsClase.construirHashSet();
         System.out.println(hashSet);
         System.out.println(hashSet.size());
         System.out.println(hashSet.contains("A"));
         System.out.println("A".hashCode());
+        */
         
         /*String a1 = "A";
             String a2 = "A";
@@ -33,7 +28,7 @@ public class App {
             System.out.println(n1.hashCode() == n2.hashCode());
         */
 
-        Set<String> linkedHash = setsClase.construirLinkedHashSet();
+        /*Set<String> linkedHash = setsClase.construirLinkedHashSet();
         System.out.println(linkedHash);
 
         Set<String> treeSet = setsClase.construirTreeSet();
@@ -56,6 +51,9 @@ public class App {
         System.err.println(treeMaps);
         System.out.println("");
         mapas.printFilter(treeMaps);
+        */
+        runEjercicios();
+        
         
     }
 
@@ -79,6 +77,41 @@ public class App {
         maquinas.add(new Maquina("Maquina4", "192.168.1.4", Arrays.asList(50)));
 
         return maquinas;
+    }
+
+    private static void runEjercicios(){
+        EjerciciosMapas ejercicios = new EjerciciosMapas();
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+            21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,18, 19, 20,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+
+        List<Integer> list1 = Arrays.asList(
+            4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
+            7, 3, 8, 9, 6, 7, 10
+        );
+        List<String[]> entradas = List.of(
+            new String[]{"Ana", "80"},
+            new String[]{"Luis", "90"},
+            new String[]{"Carlos", "70"},
+            new String[]{"Ana", "85"},
+            new String[]{"Sofia", "95"},
+            new String[]{"Luis", "88"},
+            new String[]{"Pedro", "60"},
+            new String[]{"Maria", "75"}
+        );
+
+        System.out.println("Ejercicios Mapas\n");
+        System.out.println("Contar dublicados \n");
+        System.out.println(ejercicios.contarDublicados(list));
+        System.out.println("Primer no repetido \n");
+        System.out.println(ejercicios.primerNoRepetido(list1));
+        System.out.println("Ranking puntajes \n");
+        ejercicios.RankingPuntajes(entradas);
+
+        
     }
 
 

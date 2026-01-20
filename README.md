@@ -2,23 +2,22 @@
 
 ## Autor
 - Nombre: [Edison Jahir Mendieta Armijos]
-- Carrera/Curso: [Nombre del materia]
+- Carrera/Curso: [ESTRUCTURA DE DATOS GRUPO - 1 - COMPUTACIÓN]
 
 
 ##  Nombre de la práctica - Fecha
-- Práctica: [Nombre exacto de la práctica]
-- Fecha: [2026-MM-DD]
+- Práctica: [PC: Maps Ejercicisios]
+- Fecha: [2026-01-19]
 
 ## Descripción
-Descripción de que es lo que hizo o alcanzo desarrollar en la práctica.
+-Usamos mapas para contar los elementos que se repetian teniendo aprovechando que las llaves no se ingresan de nuevo sino que se sobre escriben los values.
+usamos la misma logica para encontrar el primer numero no repetido aprovechando que se ordena por orden de llegada.
 
 ## Evidencias
 ### Captura 1
 Inserta aquí la captura del código o de la ejecución.
-- Archivo: `assets/captura-1.png`
+![alt text](assets/Captura-1.png)
 
-### Captura 2 
-Inserta aquí una segunda captura si aplica.
-- Archivo: `assets/captura-2.png`
+
 
 

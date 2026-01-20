@@ -2,7 +2,9 @@ import Structures.maps.EjerciciosMapas;
 import controller.MaquinaController;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import models.Maquina;
 
@@ -103,13 +105,24 @@ public class App {
             new String[]{"Maria", "75"}
         );
 
-        System.out.println("Ejercicios Mapas\n");
-        System.out.println("Contar dublicados \n");
+        Map<String, Integer> datos = new HashMap<>();
+            datos.put("Computacion-Ana", 85);
+            datos.put("Computacion-Luis", 92);
+            datos.put("Electronica-Carlos", 78);
+            datos.put("Electronica-Maria", 88);
+            datos.put("Computacion-Pedro", 90);
+            datos.put("Mecanica-Juan", 80);
+            datos.put("Mecanica-Sofia", 95);
+
+        System.out.println("====Ejercicios Mapas====");
+        System.out.println("\nContar dublicados ");
         System.out.println(ejercicios.contarDublicados(list));
-        System.out.println("Primer no repetido \n");
+        System.out.println("\nPrimer no repetido ");
         System.out.println(ejercicios.primerNoRepetido(list1));
-        System.out.println("Ranking puntajes \n");
+        System.out.println("\nRanking puntajes");
         ejercicios.RankingPuntajes(entradas);
+        System.out.println("\nMejor puntaje por carrera");
+        ejercicios.notaMasAltaCarreras(datos);
 
         
     }

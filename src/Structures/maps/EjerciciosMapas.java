@@ -3,6 +3,7 @@ package Structures.maps;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class EjerciciosMapas {
 
@@ -47,7 +48,22 @@ public class EjerciciosMapas {
         for (String key: puntajes.keySet()) {
             System.out.println(key + " -> " + puntajes.get(key));
         }
+        
     }
+
+    public void notaMasAltaCarreras(Map<String, Integer> datos){
+        Map<String, Integer> nota = new HashMap<>();
+        for (String key : datos.keySet()) {
+            String carrera = key.split("-")[0];
+            nota.put(carrera, Math.max(nota.getOrDefault(carrera, 0),datos.get(key) ));
+        } 
+
+        for (String key : nota.keySet()) {
+            System.out.println(key + " -> " + nota.get(key));
+        }
+
+    }
+
 
 
 }
